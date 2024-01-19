@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+   <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    
+    <div class="container">
+        <label for="options">Select an option:</label>
+        <select id="options" onchange="redirect()">
+            <option value="default">Select an option</option>
+            <option value="option1">Arduino</option>
+        </select>
+    </div>
+
+    <script>
+        function redirect() {
+            var dropdown = document.getElementById("options");
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+
+            switch (selectedValue) {
+                case "option1":
+                    window.location.href = "machine.html";
+                    break;
+                case "option2":
+                    window.location.href = "webpage2.html";
+                    break;
+                default:
+                    // Do nothing or handle the default case
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>
