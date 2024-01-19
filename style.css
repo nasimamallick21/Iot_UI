@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/agri_1.jpg')no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;  
+}
+.header_logo{
+    background-color: rgb(230, 226, 226);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: -85px;
+    margin-right: -1035px;
+    
+}
+.logo{
+    font-size: 2em;
+    color: black;
+    user-select: none;
+    margin-top: 15px
+}
+.img_logo{
+    height: 100px;
+    margin-left: 635px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    /* background-color: yellow; */
+    margin-top: 65px;
+    margin-left: -300px;
+    margin-right: 170px;
+    padding-left: 170px;
+    padding-right: 164px;
+    
+
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: green;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 60px;
+   
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: green;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    /* background-color: green; */
+    border: 2px solid green;
+    outline: none;
+    border-radius: 6px;
+    cursor : pointer;
+    font-size: 1.1em;
+    color: green;
+    font-weight: 500;
+    margin-left: 40px;
+    margin-right: 80px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover{
+    background-color: yellowgreen;
+    color: #162938;
+}
+
+/* box */
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 20%;
+    overflow: hidden;
+    transform: scale(0);
+    transition: height .2s ease;
+}
+.wrapper.active-popup{
+    transform: scale(1);
+
+}
+.wrapper .active{
+    height: 520px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #031420;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #031420;
+    margin: 30px 0;
+    
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: darkgreen;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 80%;
+    height: 60%;
+    background:transparent;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 700 ;
+    padding: 0 35px 0 5px ;
+}
+
+.input-box .icon{
+    position: relative;
+    left: 90%;
+    font-size: 1.2em;
+    color: #031625;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: darkgreen;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #031450;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background:#162938;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.login-register{
+    font-size: .9em;
+    color: darkgreen;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #080f14;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .material-icons{
+    display: none;
+}
+
+@media screen and (max-width: 760px) {
+    .header_logo {
+        padding-top: 70px;
+    }
+
+    .img_logo {
+        margin-left: 250px;
+        margin-top: 10px;
+    }
+
+    .logo{
+        flex-direction: column;
+    }
+    .navigation {
+        display: block;
+        position: absolute;
+        background-color: yellowgreen;
+        height:  100vh;
+        width: 50px;
+        top: -65px;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+
+        /* chatgpt code */
+        /* overflow: hidden;  */
+        transition: 1s;
+    }
+
+    .navigation a {
+        margin-left:-80px ;
+        color: darkgreen;
+        font-size: 29px;
+        padding-top: 20px;
+        padding-right: 20px;
+        top: 80px;
+        right: 60px;
+        display: block;
+    }
+
+    .navigation a::after {
+        display: none; /* Hide the underline on hover for small screens */
+    }
+
+    nav .material-icons:first-child {
+        margin: 10px;
+        padding-left: 5px; /* Adjusted padding to move it away from the edge */
+        display: flex;
+        font-size: 65px;
+        cursor: pointer;
+        position: fixed; /* Adjusted to make it fixed */
+        top: 10px; /* Adjusted top position */
+        left: 650px; 
+        z-index: 3; /* Increased z-index to ensure it's above other elements */
+        /* overflow: hidden; */
+        /* background: transparent; */
+        display: flex;
+    }
+
+    nav .material-icons:last-child {
+        margin: 10px;
+        padding-left: 0px; /* Adjusted padding to move it away from the edge */
+        display: flex;
+        font-size: 35px;
+        cursor: pointer;
+        position: fixed;
+        top: 10px; /* Adjusted top position */
+        left: 450px; 
+        right: 50;
+        z-index: 3; /* Increased z-index to ensure it's above other elements */
+        /* object-fit: cover; */
+        display: none;
+    }
+
+    #navLinks {
+        transition: left 0.5s; 
+    }
+
+    .navigation .btnLogin-popup {
+        width: 130px;
+        height: 50px;
+        background-color: rgb(241, 241, 149);
+        border: 2px solid darkgreen;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: darkgreen;
+        font-weight: 500;
+        margin-left: -140px; /* Adjusted margin-left */
+        margin-right: 10px; /* Adjusted margin-right */
+        margin-top: 120px;
+        transition: .5s;
+    }
+
+    .navigation .btnLogin-popup:hover {
+        background-color: darkgreen;
+        color: black;
+    }
+    
+     /* .navigation  {
+        width: 0;
+        margin-right: 0;
+        padding: 0;
+        overflow: hidden;
+    }  */
+}
