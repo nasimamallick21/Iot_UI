@@ -1,0 +1,89 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("plant1.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff66;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #ffffff66;
+}
+
+#cropDropdown {
+    margin-bottom: 10px;
+}
+
+#waterLevel {
+    background-color: #ffffff66;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+#selectedWaterLevel {
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.error {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+/* Optional: Add some styling for a clean and modern look */
+#soilType, #cropDropdown {
+    width: 100%;
+}
+
+/* Optional: Style the page header */
+h1 {
+    color: #4caf50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Optional: Style the page footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

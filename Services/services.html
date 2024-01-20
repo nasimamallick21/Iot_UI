@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dropdowns</title>
+    <link rel="stylesheet" type="text/css" href="services.css">
+    <style>
+        #cropDropdown, #waterLevel {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="soilType">Select Soil Type:</label>
+        <select id="soilType" onchange="updateCropDropdown()">
+            <option value="" disabled selected>Select Soil Type</option>
+            <option value="loamy">Loamy Soil</option>
+            <option value="sandy">Sandy Soil</option>
+            <option value="clay">Clay Soil</option>
+            <option value="red">Red Soil</option>
+            <option value="black">Black Soil</option>
+        </select>
+
+        <label for="cropDropdown" id="cropLabel" style="display: none;">Select Crop:</label>
+        <select id="cropDropdown" onchange="updateWaterLevel()">
+            <!-- Options will be dynamically populated based on soil selection -->
+        </select>
+
+        <p id="waterLevel">Water Intake:<br> <span id="selectedWaterLevel"></span></p>
+
+       <script src="services.js"></script>
+    </div>
+</body>
+</html>
